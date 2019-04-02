@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .app{
+                width: 200px;
+                height: 100px;
+                background-color: aqua
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+        <div id="#app">
+
+            <input type="button" class="up"  @click="up()" :value="button1"></input>
+
+        </div>
+
+        <script>
+            var vum = new Vue({
+                el: '#app',
+                data: {
+                    button1:"上层",
+                    button2:"下层"
+                },
+                methods: {
+                    up(){
+                        this.button2="上层变了"
+                    },
+                    down(){
+                        this.button2="下层变了"
+                    }
+                }
+            });
+        </script>
+    </body>
+
+<html>
